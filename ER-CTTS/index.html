@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ERCTTS</title>
+		<link type="text/css" href="./css/basic.css" rel="stylesheet">
+		<link type="text/css" href="./css/index.css" rel="stylesheet">
+		<link type="text/css" href="./css/bootstrap.min.css" rel="stylesheet">
+		<script type='text/javascript' src="./js/jquery-3.3.1.min.js"></script>
+		<script type='text/javascript' src="./js/index.js"></script>
+	</head>
+	<body>
+		
+		<div class="main">
+			<div class="title">
+				<img class="top-img" src="img/background.png" />
+				<span>Emphasis Recreation For Conversational Text-to-Speech with  Hierarchical MultiModal Context Modeling</span>
+			</div>
+			<div class="content">
+				<div class="section author">
+					<span><b>Rui Liu<sup>1</sup>, Zhenqi Jia<sup>1</sup>, Jie Yang<sup>1</sup>, Yifan Hu<sup>1</sup>, Haizhou Li<sup>2,3</sup></b></span>
+					<span>
+						<sup>1</sup>Inner Mongolia University, China &nbsp;</br>
+						<sup>2</sup>Shenzhen Research Institute of Big Data, School of Data Science,The Chinese University of Hong Kong, Shenzhen, China</br>
+						<sup>3</sup>National University of Singapore, Singapore
+					</span>
+					<span>邮箱栏目</span>
+				</div>
+				<div class="section">
+					<div class="section-title">ABSTRACT</div>
+					<div class="section-content abstract">
+						摘要：暂无
+					</div>
+				</div>
+				<div class="section">
+					<div class="section-title">EXPERIMENTS</div>
+					<div class="section-content experiments">
+						<div style="color: red;">实验介绍：暂时未改</div>
+						We develop four neural TTS systems for a comparative study:
+						 </br> 1) <b>FastSpeech2</b>: the state-of-the-art neural TTS model that takes the single utterance as input, without any conversational context modeling.
+						 </br> 2) <b>DailyTalk</b>: a latest neural conversational TTS model with coarse-grained context encoder.
+						 </br> 3) <b>FCTalker w/o coarse</b>: we take the coarse-grained encoder module out of the proposed FCTalker model.
+						 </br> 4) <b>FCTalker</b>: the proposed model with fine-and corse-grained context modeling strategy.
+						 </br> 5) <b>Ground Truth</b>: speech under conversation scenario. 
+					</div>
+					<div class="section-content ">
+						
+						<div class="subsection-exp-2">
+							<div style="font-size: 42px; font-weight: 600; color: #1d5da4;"> 验证集测试</div>
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">That'd be great. What kind of camera do you have?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">So... what kind of things do you do in your free time?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/0_1_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Umm I'm really into watching foreign films. what about you?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/1_0_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">LI like to do just about anything outdoors. Do you enjoy camping?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/2_1_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Camping for an evening is OK, but I couldn't do it for much longer than one night!</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/3_0_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Have you ever been camping in the Boundary Waters?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/4_1_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">No, but I've always wanted to do that. I've heard it's a beautiful place to go.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/5_0_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">It's fantastic. My family and I are very fond of the place.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/6_1_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">Do you have any photos of any of your camping trips there?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/7_0_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">Sure, would you like to see them?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/8_1_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">That'd be <b>great</b>. What kind of <b>camera</b> do you have?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/467/9_0_d467.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/dailytalk/467/9_0_d467.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/467/9_0_d467.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/467/9_0_d467.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/467/9_0_d467.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">According to usual practices, we serve dishes first and then soup. If you like we'll bring you some soup first.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">What kind of cuisine do you have?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/0_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">We have Sichuan food, Hangzhou food and Beijing Food. Which do you like best?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/1_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3</td>
+											<td style="text-align: center">Hangzhou food.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/2_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">OK. How about Dongpo meat?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/3_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">All right. I'll take it.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/4_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Do you like to use chopsticks.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/5_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">Yes, I like using chopsticks.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/6_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">Do you like some soup?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/7_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">Yes, but I don't know what soup you have.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/8_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">Umm we have beef soup and tomato soup.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/9_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">11<sup>th</sup></td>
+											<td style="text-align: center">Good. I prefer beef soup.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/10_0_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">12<sup>th</sup></td>
+											<td style="text-align: center">According to usual practices, we serve dishes <b>first</b> and then <b>soup</b>. If you like we'll bring you some <b>soup first</b>.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/97/11_1_d97.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/dailytalk/97/11_1_d97.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/97/11_1_d97.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/97/11_1_d97.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/97/11_1_d97.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">The night life there. It's so romantic!</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Can you tell me a little about Paris?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/0_0_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Sure. What do you expect to know?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/1_1_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">I want to see some of the famous places like Eiffel Tower, the Seine River...</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/2_0_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">And you shouldn't miss the Louvre Museum. You can stay there for at least a whole day.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/3_1_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Umm that's a good idea. I almost forget it. What else?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/4_0_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">The night life there. It's so <b>romantic</b>!</td>
+											<td style="text-align: center"><audio src="./audio/val/history/363/5_1_d363.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/dailytalk/363/5_1_d363.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/363/5_1_d363.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/363/5_1_d363.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/363/5_1_d363.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							
+							<!-- 一句话分割 -->
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">You really are lucky!</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">I know you have a son. How old is he?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/771/0_0_d771.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">He's going to turn six next month.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/771/1_1_d771.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Who is looking after him?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/771/2_0_d771.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">My mother-in - law. She retired last year.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/771/3_1_d771.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">You really are <b>lucky</b>!</td>
+											<td style="text-align: center"><audio src="./audio/val/history/771/4_0_d771.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/dailytalk/771/4_0_d771.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/771/4_0_d771.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/771/4_0_d771.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/771/4_0_d771.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Is it a photograph or a document?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Can I help you?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/826/0_1_d826.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">I'd like to send a fax to Shenzhen.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/826/1_0_d826.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Is it a <b>photograph</b> or a <b>document</b>?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/826/2_1_d826.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/dailytalk/826/2_1_d826.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/826/2_1_d826.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/826/2_1_d826.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/826/2_1_d826.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Of course not. People all over the world watch it on TV, or listen to it on the radio.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">You said you like classical music very much. Then who is your favorite opera star?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/0_0_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">There are three of them, the Three Tenors.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/1_1_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Oh, you mean Pavarotti, Domingo and Carreras. Umm have you been to their live shows?</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/2_0_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Yeah, it's really a unique experience. It's a solo concert by Pavarotti. He put on the performance in the Forbidden City in Beijing.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/3_1_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">I've heard of that one. It was also his swan song.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/4_0_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Besides, speaking of classical music, we should never forget about the New Year's Concert.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/5_1_d2183.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Of <b>course not</b>. People all over the world watch it on <b>TV</b>, or <b>listen</b> to it on the <b>radio</b>.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2183/6_0_d2183.wav" controls="" preload=""></audio/val></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/2183/6_0_d2183.wav" controls="" preload=""></audio/val></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/2183/6_0_d2183.wav" controls="" preload=""></audio/val></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/2183/6_0_d2183.wav" controls="" preload=""></audio/val></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/2183/6_0_d2183.wav" controls="" preload=""></audio/val></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">I’m afraid you can’t. you have to go out there and walk around.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Uh, what’s the cheapest way to go there?</td>
+											<td style="text-align: center"><audio src="./demo/2_2/371/history/0_1_d371.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">By subway.</td>
+											<td style="text-align: center"><audio src="./demo/2_2/371/history/0_1_d371.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Oh, is that right ? Is there a subway station near here?</td>
+											<td style="text-align: center"><audio src="./demo/2_2/371/history/0_1_d371.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Yes. There’s one on the other side of the building.</td>
+											<td style="text-align: center"><audio src="./demo/2_2/371/history/0_1_d371.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Good. Can I walk through this building?</td>
+											<td style="text-align: center"><audio src="./demo/2_2/371/history/0_1_d371.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">I’m <b>afraid</b> you <b>can’t</b>. you have to go out there and walk around.</td>
+											<td style="text-align: center"><audio src="./audio/val/history/2474/5_1_d2474.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/2474/5_1_d2474.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/2474/5_1_d2474.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/fctalker/2474/5_1_d2474.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/val/erctts/2474/5_1_d2474.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							<div style="font-size: 42px; font-weight: 600; color: #1d5da4; margin-top: 1rem;"> 测试集测试</div>
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Alright. What do you want to do now?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Jeff, I'm going to the supermarket. Do you want to come with me?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/0_1_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">I think the supermarket is closed now.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/1_0_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Oh, When does it close?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/2_1_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">It closes at seven on Sundays.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/3_0_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">That's too bad.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/4_1_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Don't worry, we can go tomorrow morning. It opens at eight.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/5_0_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center"><b>Alright</b>. What do you want to do now?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/13/6_1_d13.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/13/6_1_d13.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/13/6_1_d13.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/13/6_1_d13.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/13/6_1_d13.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">What’s your rule about pets?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Hi, I’m the super intendent of this building. What can I do for you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/0_1_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Hi, I’m Paul. Could you show me the apartment on the first floor?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/1_0_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Sure. Let’s go.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/2_1_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Umm I like this one. How much is the rent?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/3_0_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Eight fifty dollars a month.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/4_1_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Does the rent include utilities?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/5_0_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">No. Utilities are extra.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/6_1_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">Where’s the laundry room?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/7_0_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">It’s on the other side of this floor.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/8_1_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">What’s your <b>rule</b> about <b>pets</b>?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/21/9_0_d21.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/21/9_0_d21.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/21/9_0_d21.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/21/9_0_d21.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/21/9_0_d21.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">It could be the battery. Let me Check it.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Excuse me, could you please take a picture for us?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/0_1_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Sure. Umm where would you like to stand?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/1_0_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Over here with the waterfall in the background, please.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/2_1_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">OK.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/3_0_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Then just press the black button all the way down.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/4_1_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Are you ready? Here we go. Say Cheese!</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/5_0_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">It could be the <b>battery</b>. Let me <b>Check</b> it.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/110/6_1_d110.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/110/6_1_d110.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/110/6_1_d110.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/110/6_1_d110.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/110/6_1_d110.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Don't mention it. That's what friends are for!</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Are you alright, Ethan? You don't seem to be as cheerful as you normally are..</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/0_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">To be honest, Ava, I've just had a really bad day.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/1_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">What happened?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/2_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">First, I slept through my alarm and ended up two hours late to work.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/3_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">What did your boss say?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/4_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">He told me that if I showed up late one more time, he'd fire me. He's so mean!</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/5_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">That's horrible. Was that the first time you'd shown up late to work?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/6_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">That was my second time. The first time, umm I was in a car accident.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/7_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">Is your boss Chinese?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/8_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">No, he's from Australia. Before I met him, I thought Australians were supposed to be relaxed and easy-going.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/9_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">11<sup>th</sup></td>
+											<td style="text-align: center">What are you going to do?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/10_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">12<sup>th</sup></td>
+											<td style="text-align: center">I think I'm going to look for another job. I need to find a boss that is a bit more sensitive and optimistic.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/11_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">13<sup>th</sup></td>
+											<td style="text-align: center">That sounds like a sensible plan. Do you want me to help you with your job search?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/12_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">14<sup>th</sup></td>
+											<td style="text-align: center">That's very generous of you. Thanks for the offer.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/13_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Don't <b>mention</b> it. That's what friends are for!</td>
+											<td style="text-align: center"><audio src="./audio/test/history/153/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/153/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/153/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/153/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/153/14_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">What's on the program?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Hi, Bob! How are you doing?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/0_1_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Fine! How are you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/1_0_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">I'm fine too, thank you.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/2_1_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">I've come to tell you I'm going to the concert this evening. Umm will you come with me? I've two complimentary tickets.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/3_0_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">With the greatest pleasure.Where is the concert this evening?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/4_1_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">It will be held at the Music Hall.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/5_0_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">What's on the <b>program</b>?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/229/6_1_d229.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/229/6_1_d229.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/229/6_1_d229.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/229/6_1_d229.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/229/6_1_d229.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Great! Thank you very much.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Good morning, sir. What can I do for you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/0_1_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Some friends of mine are going to visit me this evening. Would you please buy some fruit for me?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/1_0_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Yes, sir. Do you need some flowers?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/2_1_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Umm... That's a good idea. Can you help me to get some?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/3_0_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Certainly, sir. What kind of flowers would you like?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/4_1_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">A basket of lilies.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/5_0_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">You need fruit and lilies. Am I right?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/6_1_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">Right. Here is five hundred yuan in advance. Is it enough?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/7_0_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">I think it's quite enough. I'II have them bought for you as soon as possible.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/8_1_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center"><b>Great</b>! Thank you very <b>much</b>.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/242/9_0_d242.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/242/9_0_d242.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/242/9_0_d242.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/242/9_0_d242.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/242/9_0_d242.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">You're lucky. Not everyone has such a great boss!</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">How did your interview go?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/0_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Pretty well. I don't know if I'll get the promotion or not, but I feel good about it.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/1_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">If you get the promotion, what will your new title be?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/2_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">Umm if I get the promotion, I will be a senior engineer instead of an assistant engineer.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/3_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Will you get a pay-raise, too?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/4_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">Whenever you are given added responsibilities, you should get a promotion.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/5_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">That makes sense. Who interviewed you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/6_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">My boss.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/7_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">What kinds of questions did she ask you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/8_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">She asked me about my ability to work in a team and what I thought a good boss should be.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/9_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">11<sup>th</sup></td>
+											<td style="text-align: center">The second one sounds rather difficult to answer. What did you tell her?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/10_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">12<sup>th</sup></td>
+											<td style="text-align: center">I told her that I'm an excellent team player and that a good boss should treat male and female employees equally.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/11_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">13<sup>th</sup></td>
+											<td style="text-align: center">Those are good answers. How did she react?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/12_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">14<sup>th</sup></td>
+											<td style="text-align: center">She told me that even when I become a senior engineer, I'll have to work with the assistant engineers as a team.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/13_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">15<sup>th</sup></td>
+											<td style="text-align: center">What do you think about her as a boss?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/14_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">16<sup>th</sup></td>
+											<td style="text-align: center">She's pretty easy to get along with. She listens to her employees and treats everyone equally.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/15_0_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">You're <b>lucky</b>. Not everyone has such a <b>great boss</b>!</td>
+											<td style="text-align: center"><audio src="./audio/test/history/278/16_1_d278.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/278/16_1_d278.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/278/16_1_d278.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/278/16_1_d278.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/278/16_1_d278.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Very much. What time?</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Who's singing in your home, Jim?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/0_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">It's Ellie and her friends.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/1_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Who's Ellie?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/2_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">She's my daughter and it's her birthday. They're singing " Happy Birthday ".</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/3_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">Oh, I see. How old is she?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/4_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">She's eight.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/5_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">Umm I suppose they're playing games.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/6_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">Oh, yes.Ellie was playing games all day yesterday. By the way, Alice, when's your birthday?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/7_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">Today.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/8_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">Today?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/9_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">11<sup>th</sup></td>
+											<td style="text-align: center">Yes.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/10_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">12<sup>th</sup></td>
+											<td style="text-align: center">Well, imagine that! How old are you?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/11_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">13<sup>th</sup></td>
+											<td style="text-align: center">Thirty-three. Some friends are having a birthday party for me tonight. Do you want to come?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/12_1_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center"><b>Very much</b>. What <b>time</b>?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1166/13_0_d1166.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/1166/13_0_d1166.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/1166/13_0_d1166.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/1166/13_0_d1166.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/1166/13_0_d1166.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Very quiet and safe. And it's got a lot of trees and plants.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Julia, the apartment I looked at today is pretty decent-around one twenty square meters.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1919/0_0_d1919.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">Great. Where is it?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1919/1_1_d1919.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">A new two-bedroom apartment, around one hundred to one twenty square meters, in the Sanlitun area.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1919/2_0_d1919.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">What about the surrounding area?</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1919/3_1_d1919.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Very <b>quiet</b> and <b>safe</b>. And it's got a lot of <b>trees</b> and <b>plants</b>.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/1919/4_0_d1919.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/1919/4_0_d1919.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/1919/4_0_d1919.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/1919/4_0_d1919.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/1919/4_0_d1919.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Thanks. I'll call again when things get better at home.</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>历史</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Umm I'm calling to cancel a reservation I made earlier in the week.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/2001/0_0_d2001.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">To cancel your reservation, I need your name, phone number, and date of trip, please.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/2001/1_1_d2001.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">Rudy Randolph, eight one eight five five five one two three four. My reservation begins on the second Monday of April.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/2001/2_0_d2001.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">I see your reservation on my computer. Let me just cancel it, and you'll be all set!</td>
+											<td style="text-align: center"><audio src="./audio/test/history/2001/3_1_d2001.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>当前句</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalik</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Fctalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>xxxxxx</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center"><b>Thanks</b>. I'll call again when things get better at home.</td>
+											<td style="text-align: center"><audio src="./audio/test/history/2001/4_0_d2001.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/dailytalk/2001/4_0_d2001.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/2001/4_0_d2001.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/fctalker/2001/4_0_d2001.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/test/erctts/2001/4_0_d2001.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							
+							
+							
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
